@@ -1,0 +1,20 @@
+{
+    "packs": [
+      {
+        "name": "Pack 1",
+        "statements": [
+          "Enunciado 1 del Pack 1",
+          "Enunciado 2 del Pack 1",
+          "Enunciado 3 del Pack 1"
+        ]
+      },
+      {
+        "name": "Proximamente",
+        "statements": [
+          "Enunciado 1 del Pack 2",
+          "Enunciado 2 del Pack 2",
+          "Enunciado 3 del Pack 2"
+        ]
+      }
+    ]
+  }
