@@ -31,11 +31,9 @@ function HomePage() {
       <div className="content-container">
         <h1>Bienvenido a Party-Cards App</h1>
         <p>Elige un pack de tarjetas para jugar:</p>
-
         <div className="card-pack-container">
           {packElements}
         </div>
-
         <div className="buttons-container">
           <button className="create-button" onClick={createCardPack}>Crear nuevo conjunto de tarjetas</button>
           <button className="edit-button" onClick={editCardPack}>Editar conjunto de tarjetas</button>

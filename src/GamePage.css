@@ -1,67 +1,165 @@
+/* Estilos base para .game-page */
+* {
+  font-family: 'Amatic SC', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
 .game-page {
-    background-color: #000; /* Fondo negro */
-    color: #000000; /* Texto en negr */
+  background-color: #000000; /* Fondo negro */
+  color: #000000; /* Texto en negro */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-button {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 5px;
+  position: fixed;
+  top:0;
+}
+
+/* Estilos para .statement-container */
+.statement-container {
+  background-color: #fff;
+  padding: 20px; /* Reducir el espacio en dispositivos pequeños */
+  border-radius: 30px; /* Reducir el borde */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+}
+
+.statement {
+  font-size: 80px; /* Reducir el tamaño de fuente para dispositivos pequeños */
+  text-align: center;
+  font-weight: bold;
+}
+
+.timer {
+  border-radius: 10px;
+  text-align: center; /* Centra el texto */
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a vertical para alinear el texto y botones verticalmente */
+  align-items: center;
+  margin-top: 5px;
+}
+
+.timer p {
+  color: #000000;
+  font-size: 50px; /* Hacer el texto más llamativo */
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 35px;
+  border: 3px solid #000000;
+  padding: 5px 40px;
+  margin-bottom: 5px;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center; /* Alinea los botones horizontalmente en el centro */
+}
+
+.timer-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 8px 12px; /* Ajustar el tamaño de los botones */
+  border-radius: 5px;
+  margin: 0 5px; /* Espacio entre los botones */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.answer-buttons {
+  margin-top: 40px;
+}
+
+.toma-button,
+.regala-button {
+  color: #000000;
+  font-size: 75px;
+  font-weight: bold;
+  border: 2px solid #000000;
+  padding: 40px 80px;
+  border-radius: 5px;
+}
+.toma-button {
+  margin-left: 10px;
+  background-color: #e83535;  
+}
+
+.regala-button {
+  background-color: #2ee425;
+}
+
+.message {
+  background-color: #000000;
+  color: #fff;
+  padding:200px 10px;
+  text-align: center;
+  position: fixed;
+  margin-top: 500px;
+  z-index: 1000;
+  font-size: 200px;
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Fija la posición */
+  display: none; /* Inicialmente oculto */
+}
+
+
+
+/* Media Query para dispositivos más pequeños */
+@media screen and (max-width: 768px) {
+  .game-page {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
+   /*  margin-top: 40px; Añade margen superior para dar espacio al botón de inicio */
   }
-  
+
   .statement-container {
-    background-color: #fff;
-    padding: 200px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 5px solid #3234b8;  Color aleatorio, puedes cambiarlo según tu preferencia */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    padding: 10px; /* Ajustar el espacio */
   }
-  
+
   .statement {
-    font-size: 36px;
-    text-align: center;
-    font-weight: bold;
+    font-size: 40px; /* Reducir el tamaño de fuente */
   }
   
-  .timer {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    color: #ffffff;
-    font-size: large;
-    background-color: #000;
-    border-radius: 10px;
-    padding: 10px;
+  .timer p {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
-  .start-timer-button {
-    background-color: #f5ff33;
-    color: #000000;
-    border: 2px solid #000000;
+
+  /* Ajustar el tamaño de los botones */
+  .regala-button,
+  .toma-button {
     padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
   }
-  .next-button {
-    margin-top: 10px;
-    background-color: #f5ff33;
-    color: #000000;
-    border: 2px solid #000000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .timer-button {
+    padding: 8px 16px;
   }
-  .home-button {
-    background-color: #f5ff33;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
+
+  .message {
+    font-size: 80px;
+    padding: 300px 10px;
+    color:#ffffff;
   }
-  
+}
