@@ -6,16 +6,8 @@ import cards from './components/Cards.json';
 function HomePage() {
   const navigate = useNavigate(); // Usa 'useNavigate' para la navegación
 
-  const packElements = cards.packs.map((pack, index) => (
-    <div className="card-pack" key={index}>
-      <h2>{pack.name}</h2>
-      <button onClick={() => navigateToGame(pack.name)}>Jugar</button>
-    </div>
-  ));
-
-  const navigateToGame = (packName) => {
-    // Redirige a la página de juego con el pack seleccionado
-    navigate(`/game/${packName}`);
+  const navigateToServer = () => {
+    navigate(`/lobby`)
   }
 
   const createCardPack = () => {
@@ -31,6 +23,9 @@ function HomePage() {
       <div className="content-container">
         <h1>Bienvenido a Party-Cards App</h1>
         <p>Elige un pack de tarjetas para jugar:</p>
+        <div>
+          <button className="create-button" onClick={navigateToServer}>Proximamente... Juego sincronizado</button>
+        </div>
         <div className="card-pack-container">
           {packElements}
         </div>
