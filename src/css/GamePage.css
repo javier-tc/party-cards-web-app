@@ -106,7 +106,7 @@ button {
   background-color: #2ee425;
 }
 
-.message {
+.messagePunishment {
   background-color: #000000;
   color: #fff;
   padding:200px 10px;
@@ -157,7 +157,7 @@ button {
     padding: 8px 16px;
   }
 
-  .message {
+  .messagePunishment {
     font-size: 80px;
     padding: 300px 10px;
     color:#ffffff;
