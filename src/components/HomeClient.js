@@ -1,31 +1,23 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const Lobby = ({ socket }) => {
+const HomeClient = ({ socket }) => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState('');
-  const { packName } = useParams();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem('userName', userName);
     //sends the username and socket ID to the Node.js server
     socket.emit('newUser', { userName, socketID: socket.id });
-    //console.log(packName);
-    navigateToGame(packName);
+    navigate('/clientserver');
   };
 
-
-  const navigateToGame = (packName) => {
-    // Redirige a la página de juego con el pack seleccionado
-    navigate(`/game/${packName}`);
-  };
 
   return (
     <div>
-      <form className="lobby__container" onSubmit={handleSubmit}>
-      <h2 className="lobby__header">Ingresar al juego</h2>
+      <form className="HomeClient__container" onSubmit={handleSubmit}>
+      <h2 className="HomeClient__header">Ingresar al juego</h2>
       <label htmlFor="username">Nombre de usuario</label>
       <input
         type="text"
@@ -36,11 +28,11 @@ const Lobby = ({ socket }) => {
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
       />
-      <button className="lobby__cta">Listo</button>
+      <button className="HomeClient__cta">Listo</button>
       </form>
     </div>
     
   );
 };
 
-export default Lobby;
+export default HomeClient;

@@ -18,8 +18,10 @@ let users = [];
 
 socketIO.on('connection', (socket) => {
   console.log(`⚡: ${socket.id} user just connected!`);
+
   socket.on('message', (data) => {
     socketIO.emit('messageResponse', data);
+    console.log('new message', data);
   });
 
   //socket.on('typing', (data) => socket.broadcast.emit('typingResponse', data));
