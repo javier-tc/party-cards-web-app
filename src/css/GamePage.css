@@ -9,7 +9,7 @@ button {
 
 .game-page {
   background-color: #000000; /* Fondo negro */
-  color: #000000; /* Texto en negro */
+  color: #ffffff; /* Texto en blanco para mayor contraste */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,148 +18,139 @@ button {
 }
 
 .home-button {
-  background-color: #ffffff;
+  background-color: #E4DD25;
   color: #000000;
   font-size: 20px;
   font-weight: bold;
-  border: 2px solid #000000;
   padding: 10px 20px;
   border-radius: 5px;
-  margin-top: 5px;
   position: fixed;
-  top:0;
+  top: 0;
+  margin-top: 10px;
 }
 
 /* Estilos para .statement-container */
 .statement-container {
   background-color: #fff;
-  padding: 20px; /* Reducir el espacio en dispositivos pequeños */
-  border-radius: 30px; /* Reducir el borde */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .statement {
-  font-size: 80px; /* Reducir el tamaño de fuente para dispositivos pequeños */
-  text-align: center;
+  font-size: 80px;
   font-weight: bold;
+  color: #000000;
 }
 
 .timer {
-  border-radius: 10px;
-  text-align: center; /* Centra el texto */
+  text-align: center;
   display: flex;
-  flex-direction: column; /* Cambia la dirección a vertical para alinear el texto y botones verticalmente */
+  flex-direction: column;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 .timer p {
   color: #000000;
-  font-size: 50px; /* Hacer el texto más llamativo */
+  font-size: 40px;
   font-weight: bold;
-  background-color: #fff;
-  border-radius: 35px;
+  background-color: #ffffff;
+  border-radius: 15px;
   border: 3px solid #000000;
-  padding: 5px 40px;
-  margin-bottom: 5px;
+  padding: 10px 30px;
+  margin-bottom: 10px;
 }
 
 .timer-buttons {
   display: flex;
-  justify-content: center; /* Alinea los botones horizontalmente en el centro */
+  justify-content: center;
 }
 
 .timer-button {
   background-color: #ffffff;
   color: #000000;
   border: 2px solid #000000;
-  padding: 8px 12px; /* Ajustar el tamaño de los botones */
+  padding: 10px 20px;
   border-radius: 5px;
-  margin: 0 5px; /* Espacio entre los botones */
+  margin: 0 10px;
   font-size: 20px;
   font-weight: bold;
 }
 
 .answer-buttons {
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .toma-button,
 .regala-button {
-  color: #000000;
+  color: #ffffff;
   font-size: 75px;
   font-weight: bold;
-  border: 2px solid #000000;
-  padding: 40px 80px;
+  padding: 30px 60px;
   border-radius: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra de texto */
 }
+
 .toma-button {
   margin-left: 10px;
-  background-color: #e83535;  
+  background-color: #a52a2a;
 }
 
 .regala-button {
-  background-color: #2ee425;
+  background-color: #039336;
 }
 
 .messagePunishment {
-  background-color: #000000;
-  color: #fff;
-  padding:200px 10px;
+  background-color: rgba(0, 0, 0, 0.95); /* Fondo negro semi-transparente */
+  color: #ffffff;
   text-align: center;
-  position: fixed;
-  margin-top: 500px;
-  z-index: 1000;
   font-size: 200px;
-  height: 100%;
-  width: 100%;
-  position: fixed; /* Fija la posición */
-  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999; /* Para que esté por encima de los otros elementos */
+  display: none;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
-
-
 
 /* Media Query para dispositivos más pequeños */
 @media screen and (max-width: 768px) {
   .game-page {
-    height: 100vh;
-   /*  margin-top: 40px; Añade margen superior para dar espacio al botón de inicio */
+    position: fixed;
   }
 
   .statement-container {
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 0px;
-    padding: 10px; /* Ajustar el espacio */
+    padding: 3px;
   }
 
   .statement {
-    font-size: 40px; /* Reducir el tamaño de fuente */
-  }
-  
-  .timer p {
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 40px;
   }
 
-  /* Ajustar el tamaño de los botones */
-  .regala-button,
-  .toma-button {
-    padding: 10px 20px;
+  .timer p {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 
   .timer-button {
     padding: 8px 16px;
   }
 
+  .toma-button,
+  .regala-button {
+    padding: 10px 20px;
+    font-size: 55px;
+  }
   .messagePunishment {
     font-size: 80px;
-    padding: 300px 10px;
-    color:#ffffff;
   }
 }

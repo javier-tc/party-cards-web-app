@@ -1,0 +1,36 @@
+.client-page {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto en blanco para mayor contraste */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.message {
+    font-size: 80px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.leaveGame-button {
+    background-color: #E4DD25;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    margin-top: 10px;
+}

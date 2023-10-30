@@ -1,9 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import './css/GamePage.css';
 import GameStatements from './components/GameStatements';
-import UserBar from './components/UsersBar';
+import './css/GamePage.css';
 
 const GamePage = ({ socket }) => {
 	const navigate = useNavigate();
@@ -19,7 +18,6 @@ const GamePage = ({ socket }) => {
 		<div className="game-page">
 			<button className="home-button" onClick={navigateToHome}>Volver al inicio</button>
 			<GameStatements packName={packName} socket={socket} />
-			<UserBar socket={socket}/>
 		</div>
 	);
 }

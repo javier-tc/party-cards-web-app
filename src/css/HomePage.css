@@ -1,79 +1,82 @@
 .home-page {
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto en blanco */
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content-container {
-    text-align: center;
-  }
-  .content-container h1 {
-    font-size: 60px;
-  }
+	background-color: #000;
+	/* Fondo negro */
+	color: #fff;
+	/* Texto en blanco */
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-  .content-container p {
-    font-size: 40px;
-  }
+.content-container {
+	text-align: center;
+}
 
-  .card-pack-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 80px;
-  }
-  
-  .card-pack {
-    background-color: #333;
-    padding: 10px 0px;
-    margin: 10px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 25px;
-  }
-  
-  .card-pack h2 {
-    margin: 0;
-    font-weight: normal;
-    font-size: 40px;
-  }
-  
-  .card-pack button {
-    background-color: #E4DD25;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .buttons-container {
-    display: flex;
-    flex-direction: column;
-    margin: 40px;
-  }
-  
-  .create-button,
-  .edit-button {
-    background-color: #E4DD25;
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .home-page{
-      height: 100%;
-    }
+.content-container h1 {
+	font-size: 60px;
+}
 
-  }
+.content-container p {
+	font-size: 40px;
+}
+
+.card-pack-container {
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	margin: 20px;
+}
+
+.card-pack {
+	background-color: #333;
+	padding: 10px 0px;
+	margin: 10px;
+	text-align: center;
+	border-radius: 8px;
+	font-size: 25px;
+}
+
+.card-pack h2 {
+	margin: 0;
+	font-weight: normal;
+	font-size: 40px;
+}
+
+.play-button {
+	background-color: #E4DD25;
+	color: #000000;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-top: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.buttons-container {
+	display: flex;
+	flex-direction: column;
+	margin: 40px;
+}
+
+.create-button,
+.edit-button {
+	background-color: #E4DD25;
+	color: #000000;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 10px 10px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+	.home-page {
+		height: 100%;
+	}
+
+}
