@@ -4,7 +4,7 @@ import '../css/ClientView.css'
 
 const ClientView = ({ socket }) => {
 	const [messages, setMessages] = useState('');
-	const [remainingTime, setRemainingTime] = useState('Cargando...');
+	const [remainingTime, setRemainingTime] = useState(15);
 	//const [text, setText] = useState();
 
 	const showMessagePunishment = (messagePunishmentText, timeout) => {
