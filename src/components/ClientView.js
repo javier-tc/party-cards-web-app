@@ -4,6 +4,20 @@ import '../css/ClientView.css'
 
 const ClientView = ({ socket }) => {
 	const [messages, setMessages] = useState('');
+	const [remainingTime, setRemainingTime] = useState('Cargando...');
+	//const [text, setText] = useState();
+
+	const showMessagePunishment = (messagePunishmentText, timeout) => {
+		const messagePunishment = document.getElementById('messagePunishment');
+		if (messagePunishmentText) {
+			messagePunishment.innerText = messagePunishmentText;
+		  }
+		messagePunishment.style.display = 'flex';
+
+		setTimeout(() => {
+			messagePunishment.style.display = 'none';
+		}, timeout);
+	};
 
 	useEffect(() => {
 		// Escuchar el evento 'allMessages' para recibir todos los mensajes
@@ -17,9 +31,24 @@ const ClientView = ({ socket }) => {
 		});
 	}, [socket]);
 
+	useEffect(() => {
+		socket.on('time',(data) => {
+			setRemainingTime(data.timer);
+			//console.log(data);
+		});
+		socket.on('punishment', (data) => {
+			//setText(data.text);
+			showMessagePunishment(data.text,3000);
+		});
+	}, [socket]);
+
 	return (
 		<div className="client-page">
 			<ClientGame messages={messages} />
+			<div className='timer-client'>
+				{remainingTime}
+			</div>
+			<div id="messagePunishment" className="messagePunishment-client"></div>
 		</div>
 	);
 };

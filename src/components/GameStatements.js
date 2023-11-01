@@ -110,11 +110,23 @@ const GameStatements = ({ packName, socket }) => {
 	};
 
 	const rightAnswer = () => {
-		showMessagePunishment('SE LO GANOOO.\nREGALA ' + colorPunish(borderColor), 3000, nextStatement);
+		const message = 'SE LO GANOOO.\nREGALA ' + colorPunish(borderColor);
+		showMessagePunishment(message, 3000, nextStatement);
+		socket.emit('punishment', {
+			text: message,
+			id: `${socket.id}${Math.random()}`,
+			socketID: socket.id,
+		});
 	};
 
 	const wrongAnswer = () => {
-		showMessagePunishment('ES MUY PENCAAA.\nTOMA ' + colorPunish(borderColor), 3000, nextStatement);
+		const message = 'ES MUY PENCAAA.\nTOMA ' + colorPunish(borderColor);
+		showMessagePunishment(message, 3000, nextStatement);
+		socket.emit('punishment', {
+			text: message,
+			id: `${socket.id}${Math.random()}`,
+			socketID: socket.id,
+		});
 	};
 
 	const statement = statements[currentStatement - 1] === undefined ? nextStatement() : statements[currentStatement - 1];
@@ -130,7 +142,7 @@ const GameStatements = ({ packName, socket }) => {
 					{statement}
 				</div>
 			</div>
-			<GameTimer />
+			<GameTimer socket={socket}/>
 			<div className='answer-buttons'>
 				<button className="regala-button" onClick={rightAnswer}>Regala</button>
 				<button className="toma-button" onClick={wrongAnswer}>Toma</button>

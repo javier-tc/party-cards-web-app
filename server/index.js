@@ -21,14 +21,22 @@ socketIO.on('connection', (socket) => {
 
   // Emitir los mensajes almacenados al cliente
   socketIO.emit('allMessages', messages);
-  console.log('mensajes emitidos', messages);
+  //console.log('mensajes emitidos', messages);
 
   socket.on('message', (data) => {
     messages.push(data);
     socketIO.emit('allMessages', data);
-    console.log('mensaje emitido', data);
+    //console.log('mensaje emitido', data);
   });
 
+  socket.on('time',(data) => {
+    socketIO.emit('time',data);
+    //console.log('tiempo emitido', data);
+  })
+
+  socket.on('punishment',(data) => {
+    socketIO.emit('punishment', data);
+  })
   socket.on('disconnect', () => {
     console.log('🔥: A user disconnected');
     //Updates the list of users when a user disconnects from the server
