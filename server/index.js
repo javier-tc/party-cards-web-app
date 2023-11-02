@@ -6,13 +6,13 @@ const PORT = process.env.PORT || 4000;
 const http = require('http').Server(app);
 const cors = require('cors');
 
-const ipFront = "10.220.150.135";
+const ipFront = "https://frontend-partycards.onrender.com";
 
 app.use(cors());
 
 const socketIO = require('socket.io')(http, {
 	cors: {
-		origin: ipFront+":10000"
+		origin: ipFront
 	}
 });
 
