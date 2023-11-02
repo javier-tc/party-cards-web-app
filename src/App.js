@@ -7,6 +7,7 @@ import socketIO from 'socket.io-client';
 
 
 function App() {
+	const [socket, setSocket] = useState();
 	function connectToSocketWithAPIKey(ip, apiKey) {
 		return new Promise((resolve, reject) => {
 			const socket = socketIO.connect(ip + ':10000', {
