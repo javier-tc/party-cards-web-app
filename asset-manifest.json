@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.a85fff1b.css",
-    "main.js": "/static/js/main.78df951a.js",
-    "static/media/amatic-sc-latin-400-normal.woff2": "/static/media/amatic-sc-latin-400-normal.6db660b169c766765a9f.woff2",
-    "static/media/amatic-sc-latin-ext-400-normal.woff2": "/static/media/amatic-sc-latin-ext-400-normal.6f66fe6c0b93c2dbeea9.woff2",
-    "static/media/amatic-sc-latin-400-normal.woff": "/static/media/amatic-sc-latin-400-normal.8bfb731f086b5b7e4238.woff",
-    "static/media/amatic-sc-cyrillic-400-normal.woff2": "/static/media/amatic-sc-cyrillic-400-normal.b7460742e727d5f24a89.woff2",
-    "static/media/amatic-sc-latin-ext-400-normal.woff": "/static/media/amatic-sc-latin-ext-400-normal.05351e39bf7ef38df7f6.woff",
-    "static/media/amatic-sc-cyrillic-400-normal.woff": "/static/media/amatic-sc-cyrillic-400-normal.a0a625a07a62c0f38271.woff",
-    "static/media/amatic-sc-hebrew-400-normal.woff2": "/static/media/amatic-sc-hebrew-400-normal.74daf388a55cca4947e8.woff2",
-    "static/media/amatic-sc-vietnamese-400-normal.woff2": "/static/media/amatic-sc-vietnamese-400-normal.d0c852b92a518acd87ad.woff2",
-    "static/media/amatic-sc-hebrew-400-normal.woff": "/static/media/amatic-sc-hebrew-400-normal.4c08cc88edbc69369c4b.woff",
-    "static/media/amatic-sc-vietnamese-400-normal.woff": "/static/media/amatic-sc-vietnamese-400-normal.c88bd45de8f5b1df90b3.woff",
-    "index.html": "/index.html",
-    "main.a85fff1b.css.map": "/static/css/main.a85fff1b.css.map",
-    "main.78df951a.js.map": "/static/js/main.78df951a.js.map"
+    "main.css": "/party-cards-web-app/static/css/main.2ca9b905.css",
+    "main.js": "/party-cards-web-app/static/js/main.78df951a.js",
+    "static/media/amatic-sc-latin-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-latin-400-normal.6db660b169c766765a9f.woff2",
+    "static/media/amatic-sc-latin-ext-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-latin-ext-400-normal.6f66fe6c0b93c2dbeea9.woff2",
+    "static/media/amatic-sc-latin-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-latin-400-normal.8bfb731f086b5b7e4238.woff",
+    "static/media/amatic-sc-cyrillic-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-cyrillic-400-normal.b7460742e727d5f24a89.woff2",
+    "static/media/amatic-sc-latin-ext-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-latin-ext-400-normal.05351e39bf7ef38df7f6.woff",
+    "static/media/amatic-sc-cyrillic-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-cyrillic-400-normal.a0a625a07a62c0f38271.woff",
+    "static/media/amatic-sc-hebrew-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-hebrew-400-normal.74daf388a55cca4947e8.woff2",
+    "static/media/amatic-sc-vietnamese-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-vietnamese-400-normal.d0c852b92a518acd87ad.woff2",
+    "static/media/amatic-sc-hebrew-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-hebrew-400-normal.4c08cc88edbc69369c4b.woff",
+    "static/media/amatic-sc-vietnamese-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-vietnamese-400-normal.c88bd45de8f5b1df90b3.woff",
+    "index.html": "/party-cards-web-app/index.html",
+    "main.2ca9b905.css.map": "/party-cards-web-app/static/css/main.2ca9b905.css.map",
+    "main.78df951a.js.map": "/party-cards-web-app/static/js/main.78df951a.js.map"
   },
   "entrypoints": [
-    "static/css/main.a85fff1b.css",
+    "static/css/main.2ca9b905.css",
     "static/js/main.78df951a.js"
   ]
 }
