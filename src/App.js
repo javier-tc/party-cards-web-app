@@ -12,7 +12,7 @@ const socket = socketIO.connect(urlBackend);
 function App() {
 
 	return (
-		<Router>
+		<Router history={hashHistory} >
 			<div>
 				<Routes>
 					<Route path="/party-cards-web-app" element={<HomePage />} />
