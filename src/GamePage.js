@@ -11,7 +11,7 @@ const GamePage = ({ socket }) => {
 	// Función para volver a la página de inicio
 	const navigateToHome = () => {
 		// Implementa la lógica de navegación aquí.
-		navigate('/party-cards-web-app');
+		navigate('/');
 	};
 
 	return (
