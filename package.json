@@ -2,7 +2,6 @@
 	"name": "party-cards-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://javier-tc.github.io/party-cards-web-app",
 	"dependencies": {
 		"@fontsource/amatic-sc": "^5.0.17",
 		"@testing-library/jest-dom": "^5.17.0",
