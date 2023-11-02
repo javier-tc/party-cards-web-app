@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const http = require('http').Server(app);
 const cors = require('cors');
 
-const ipFront = "10.220.224.241";
+const ipFront = "10.220.150.135";
 
 app.use(cors());
 
