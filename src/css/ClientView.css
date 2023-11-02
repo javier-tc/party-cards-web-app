@@ -1,0 +1,85 @@
+.client-page {
+    background-color: #000000;
+    /* Fondo negro */
+    color: #ffffff;
+    /* Texto en blanco para mayor contraste */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.message {
+    font-size: 80px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.leaveGame-button {
+    background-color: #E4DD25;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    margin-top: 10px;
+}
+
+.timer-client {
+    color: #000000;
+    font-size: 80px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 3px solid #000000;
+    padding: 10px 50px;
+    margin-top: 10px;
+}
+
+.messagePunishment-client {
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo negro semi-transparente */
+    color: #ffffff;
+    text-align: center;
+    font-size: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999; /* Para que esté por encima de los otros elementos */
+    display: none;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+
+@media screen and (max-width: 768px) {
+    .message-container {
+        margin-top: 20px;
+        padding: 3px;
+    }
+
+    .message {
+        font-size: 40px;
+    }
+
+    .timer-client{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .messagePunishment-client {
+        font-size: 80px;
+    }
+}

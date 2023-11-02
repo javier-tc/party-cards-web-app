@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useCallback} from "react";
 
-const GameTimer = () => {
+const GameTimer = ({ socket}) => {
     const timeTimer = 15;//Tiempo del temporizador asignado en segundos
     const [remainingTime, setRemainingTime] = useState(timeTimer);
     const [timerRunning, setTimerRunning] = useState(false);
+
     const startTimer = () => {
-    //setRemainingTime(10);
-    setTimerRunning(true);
+        //setRemainingTime(10);
+        setTimerRunning(true);
+        handleSendTime(remainingTime);
     };
 
     const pauseTimer = () => {
@@ -15,18 +17,29 @@ const GameTimer = () => {
 
     const resetTimer = () => {
         setRemainingTime(timeTimer);
+        setTimerRunning(false);
     }
+
+    const handleSendTime = useCallback((time) => {
+        //console.log('sending...', statement);
+        socket.emit('time', {
+            timer: time,
+            id: `${socket.id}${Math.random()}`,
+            socketID: socket.id,
+        });
+    }, [socket]);
 
     useEffect(() => {
-    if (timerRunning && remainingTime > 0) {
-        const timer = setTimeout(() => {
-        setRemainingTime(remainingTime - 1);
-        }, 1000);
+        if (timerRunning && remainingTime > 0) {
+            const timer = setTimeout(() => {
+                setRemainingTime(remainingTime - 1);
+            }, 1000);
+            handleSendTime(remainingTime);
+            return () => clearTimeout(timer);
+        }
+        handleSendTime(remainingTime);
+    }, [timerRunning, remainingTime, handleSendTime]);
 
-        return () => clearTimeout(timer);
-    }
-    }, [timerRunning, remainingTime]);
-    
     return (
         <div className="timer">
             <p>{remainingTime}</p>
