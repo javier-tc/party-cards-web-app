@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 4000;
 const http = require('http').Server(app);
 const cors = require('cors');
 
-const ipFront = "https://frontend-partycards.onrender.com";
+const ipFront = "https://partycards.onrender.com";
 
 app.use(cors());
 
