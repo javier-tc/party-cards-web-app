@@ -5,7 +5,7 @@ const ClientGame = ({ messages }) => {
 
 	const navigate = useNavigate();
 	const handleLeaveGame = () => {
-		navigate('/');
+		navigate('/party-cards-web-app');
 		window.location.reload();
 	};
 
