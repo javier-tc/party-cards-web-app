@@ -15,7 +15,7 @@ const GameStatements = ({ packName, socket }) => {
 			}
 		}, timeout);
 	};
-
+	const [callReset, setCallReset] = useState(false);
 	const [currentStatement, setCurrentStatement] = useState(0);
 	const [statements, setStatements] = useState([]);
 	const generateRandomColor = (array) => {
@@ -45,6 +45,7 @@ const GameStatements = ({ packName, socket }) => {
 		if (currentStatement < statements.length - 1) {
 			handleSendMessage(statements[currentStatement], borderColors[currentStatement]);
 			setCurrentStatement(currentStatement + 1);
+			setCallReset(true);
 		}
 	};
 
@@ -117,6 +118,7 @@ const GameStatements = ({ packName, socket }) => {
 			id: `${socket.id}${Math.random()}`,
 			socketID: socket.id,
 		});
+		setCallReset(false);
 	};
 
 	const wrongAnswer = () => {
@@ -127,6 +129,7 @@ const GameStatements = ({ packName, socket }) => {
 			id: `${socket.id}${Math.random()}`,
 			socketID: socket.id,
 		});
+		setCallReset(false);
 	};
 
 	const statement = statements[currentStatement - 1] === undefined ? nextStatement() : statements[currentStatement - 1];
@@ -142,7 +145,7 @@ const GameStatements = ({ packName, socket }) => {
 					{statement}
 				</div>
 			</div>
-			<GameTimer socket={socket}/>
+			<GameTimer socket={socket} callReset={callReset} />
 			<div className='answer-buttons'>
 				<button className="regala-button" onClick={rightAnswer}>Regala</button>
 				<button className="toma-button" onClick={wrongAnswer}>Toma</button>

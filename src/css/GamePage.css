@@ -1,156 +1,165 @@
 /* Estilos base para .game-page */
 * {
-  font-family: 'Amatic SC', sans-serif;
+	font-family: 'Amatic SC', sans-serif;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .game-page {
-  background-color: #000000; /* Fondo negro */
-  color: #ffffff; /* Texto en blanco para mayor contraste */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	background-color: #000000;
+	/* Fondo negro */
+	color: #ffffff;
+	/* Texto en blanco para mayor contraste */
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .home-button {
-  background-color: #E4DD25;
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  position: fixed;
-  top: 0;
-  margin-top: 10px;
+	background-color: #E4DD25;
+	color: #000000;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 5px;
+	position: fixed;
+	top: 0;
+	margin-top: 10px;
 }
 
 /* Estilos para .statement-container */
 .statement-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 30px;
-  margin-top: 20px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 30px;
+	margin-top: 20px;
+	text-align: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .statement {
-  font-size: 80px;
-  font-weight: bold;
-  color: #000000;
+	font-size: 80px;
+	font-weight: bold;
+	color: #000000;
 }
 
 .timer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
 }
 
 .timer p {
-  color: #000000;
-  font-size: 40px;
-  font-weight: bold;
-  background-color: #ffffff;
-  border-radius: 15px;
-  border: 3px solid #000000;
-  padding: 10px 30px;
-  margin-bottom: 10px;
+	color: #000000;
+	font-size: 40px;
+	font-weight: bold;
+	background-color: #ffffff;
+	border-radius: 15px;
+	border: 3px solid #000000;
+	padding: 10px 30px;
+	margin-bottom: 10px;
 }
 
 .timer-buttons {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .timer-button {
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #000000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 0 10px;
-  font-size: 20px;
-  font-weight: bold;
+	background-color: #ffffff;
+	color: #000000;
+	border: 2px solid #000000;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin: 0 10px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .answer-buttons {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
 }
 
 .toma-button,
 .regala-button {
-  color: #ffffff;
-  font-size: 75px;
-  font-weight: bold;
-  padding: 30px 60px;
-  border-radius: 5px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra de texto */
+	color: #ffffff;
+	font-size: 75px;
+	font-weight: bold;
+	padding: 30px 60px;
+	border-radius: 5px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	/* Agrega sombra de texto */
 }
 
 .toma-button {
-  margin-left: 10px;
-  background-color: #a52a2a;
+	margin-left: 10px;
+	background-color: #a52a2a;
 }
 
 .regala-button {
-  background-color: #039336;
+	background-color: #039336;
 }
 
 .messagePunishment {
-  background-color: rgba(0, 0, 0, 0.95); /* Fondo negro semi-transparente */
-  color: #ffffff;
-  text-align: center;
-  font-size: 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999; /* Para que esté por encima de los otros elementos */
-  display: none;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
+	background-color: rgba(0, 0, 0, 0.95);
+	/* Fondo negro semi-transparente */
+	color: #ffffff;
+	text-align: center;
+	font-size: 200px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 999;
+	/* Para que esté por encima de los otros elementos */
+	display: none;
+	justify-content: center;
+	/* Centra horizontalmente */
+	align-items: center;
+	/* Centra verticalmente */
 }
 
 /* Media Query para dispositivos más pequeños */
 @media screen and (max-width: 768px) {
-  .game-page {
-    position: fixed;
-  }
+	.game-page {
+		position: fixed;
+	}
 
-  .statement-container {
-    margin-top: 20px;
-    padding: 3px;
-  }
+	.statement-container {
+		margin-top: 20px;
+		padding: 3px;
+	}
 
-  .statement {
-    font-size: 40px;
-  }
+	.statement {
+		font-size: 40px;
+	}
 
-  .timer p {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
+	.timer p {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
 
-  .timer-button {
-    padding: 8px 16px;
-  }
+	.timer-button {
+		padding: 8px 16px;
+	}
 
-  .toma-button,
-  .regala-button {
-    padding: 10px 20px;
-    font-size: 55px;
-  }
-  .messagePunishment {
-    font-size: 80px;
-  }
+	.toma-button,
+	.regala-button {
+		padding: 10px 20px;
+		font-size: 55px;
+	}
+
+	.messagePunishment {
+		font-size: 80px;
+	}
 }

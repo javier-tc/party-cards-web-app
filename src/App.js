@@ -5,7 +5,7 @@ import GamePage from './GamePage';
 import ClientView from './components/ClientView';
 
 import socketIO from 'socket.io-client';
-const socket = socketIO.connect('http://192.168.1.87:4000');
+const socket = socketIO.connect('http://192.168.1.85:4000');
 
 function App() {
 

@@ -11,7 +11,7 @@ const ClientView = ({ socket }) => {
 		const messagePunishment = document.getElementById('messagePunishment');
 		if (messagePunishmentText) {
 			messagePunishment.innerText = messagePunishmentText;
-		  }
+		}
 		messagePunishment.style.display = 'flex';
 
 		setTimeout(() => {
@@ -23,22 +23,22 @@ const ClientView = ({ socket }) => {
 		// Escuchar el evento 'allMessages' para recibir todos los mensajes
 		socket.on('allMessages', (allMessages) => {
 			//console.log(allMessages[allMessages.length - 1]);
-			if (allMessages[allMessages.length - 1] !== undefined){
+			if (allMessages[allMessages.length - 1] !== undefined) {
 				setMessages(allMessages[allMessages.length - 1]);
-			}else{
+			} else {
 				setMessages(allMessages);
 			}
 		});
 	}, [socket]);
 
 	useEffect(() => {
-		socket.on('time',(data) => {
+		socket.on('time', (data) => {
 			setRemainingTime(data.timer);
 			//console.log(data);
 		});
 		socket.on('punishment', (data) => {
 			//setText(data.text);
-			showMessagePunishment(data.text,3000);
+			showMessagePunishment(data.text, 3000);
 		});
 	}, [socket]);
 
@@ -46,7 +46,7 @@ const ClientView = ({ socket }) => {
 		<div className="client-page">
 			<ClientGame messages={messages} />
 			<div className='timer-client'>
-				{remainingTime}
+				{remainingTime === 0 ? '¡Se acabó el tiempo!' : remainingTime}
 			</div>
 			<div id="messagePunishment" className="messagePunishment-client"></div>
 		</div>

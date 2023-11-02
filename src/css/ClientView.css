@@ -49,7 +49,8 @@
 }
 
 .messagePunishment-client {
-    background-color: rgba(0, 0, 0, 0.95); /* Fondo negro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Fondo negro semi-transparente */
     color: #ffffff;
     text-align: center;
     font-size: 200px;
@@ -58,11 +59,14 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 999; /* Para que esté por encima de los otros elementos */
+    z-index: 999;
+    /* Para que esté por encima de los otros elementos */
     display: none;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-  }
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
 
 @media screen and (max-width: 768px) {
     .message-container {
@@ -74,7 +78,7 @@
         font-size: 40px;
     }
 
-    .timer-client{
+    .timer-client {
         font-size: 30px;
         margin-bottom: 10px;
     }
