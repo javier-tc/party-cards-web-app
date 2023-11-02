@@ -33,8 +33,8 @@ function HomePage() {
 			<div className="content-container">
 				<h1>Bienvenido a Party-Cards App</h1>
 				<div className="card-pack-container">
-					<p>Unirse a una partida en la red:</p>
-					<button className="play-button" onClick={navigateToClient}>Unirse</button>
+					{/* <p>Unirse a una partida en la red:</p>
+					<button className="play-button" onClick={navigateToClient}>Unirse</button> */}
 					<p>Inicia una partida:</p>
 					{packElements}
 				</div>
