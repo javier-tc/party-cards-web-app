@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/party-cards-web-app/static/css/main.05faee0b.css",
-    "main.js": "/party-cards-web-app/static/js/main.c04ba9d7.js",
+    "main.js": "/party-cards-web-app/static/js/main.096fd0bc.js",
     "static/media/amatic-sc-latin-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-latin-400-normal.6db660b169c766765a9f.woff2",
     "static/media/amatic-sc-latin-ext-400-normal.woff2": "/party-cards-web-app/static/media/amatic-sc-latin-ext-400-normal.6f66fe6c0b93c2dbeea9.woff2",
     "static/media/amatic-sc-latin-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-latin-400-normal.8bfb731f086b5b7e4238.woff",
@@ -14,10 +14,10 @@
     "static/media/amatic-sc-vietnamese-400-normal.woff": "/party-cards-web-app/static/media/amatic-sc-vietnamese-400-normal.c88bd45de8f5b1df90b3.woff",
     "index.html": "/party-cards-web-app/index.html",
     "main.05faee0b.css.map": "/party-cards-web-app/static/css/main.05faee0b.css.map",
-    "main.c04ba9d7.js.map": "/party-cards-web-app/static/js/main.c04ba9d7.js.map"
+    "main.096fd0bc.js.map": "/party-cards-web-app/static/js/main.096fd0bc.js.map"
   },
   "entrypoints": [
     "static/css/main.05faee0b.css",
-    "static/js/main.c04ba9d7.js"
+    "static/js/main.096fd0bc.js"
   ]
 }
