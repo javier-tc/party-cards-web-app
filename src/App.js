@@ -3,11 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import GamePage from './GamePage';
 import ClientView from './components/ClientView';
+import socketIO from 'socket.io-client';
 
 const ipBackend = "100.20.92.101";
-
-import socketIO from 'socket.io-client';
-const socket = socketIO.connect(ipBackend+':81');
+const socket = socketIO.connect(ipBackend+':10000');
 
 function App() {
 
