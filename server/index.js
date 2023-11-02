@@ -6,11 +6,13 @@ const PORT = process.env.PORT || 4000;
 const http = require('http').Server(app);
 const cors = require('cors');
 
+const ipFront = "200.28.4.130";
+
 app.use(cors());
 
 const socketIO = require('socket.io')(http, {
 	cors: {
-		origin: "http://192.168.1.85:3000"
+		origin: ipFront+":80"
 	}
 });
 
