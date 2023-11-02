@@ -15,7 +15,7 @@ function App() {
 		<Router>
 			<div>
 				<Routes>
-					<Route path="/" element={<HomePage />} />
+					<Route path="/party-cards-web-app" element={<HomePage />} />
 					<Route path="/game/:packName" element={<GamePage socket={socket} />} />
 					<Route path="/clientserver" element={<ClientView socket={socket} />} />
 				</Routes>
