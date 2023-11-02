@@ -5,66 +5,68 @@ import GamePage from './GamePage';
 import ClientView from './components/ClientView';
 import socketIO from 'socket.io-client';
 
-const ipBackend1 = "100.20.92.101";
-const ipBackend2 = "44.225.181.72";
-const ipBackend3 = "44.227.217.144";
-
-function connectToSocket(ip) {
-  return new Promise((resolve, reject) => {
-    const socket = socketIO.connect(ip + ':10000');
-    
-    socket.on('connect', () => {
-      // La conexión se estableció con éxito
-      resolve(socket);
-    });
-    
-    socket.on('connect_error', (error) => {
-      // La conexión no se pudo establecer
-      reject(error);
-    });
-  });
-}
 
 function App() {
-  const [socket, setSocket] = useState(null);
+	function connectToSocketWithAPIKey(ip, apiKey) {
+		return new Promise((resolve, reject) => {
+			const socket = socketIO.connect(ip + ':10000', {
+				query: {
+					apiKey: apiKey, // Envia la API key como query parameter
+				},
+			});
 
-  useEffect(() => {
-    connectToSocket(ipBackend1)
-      .then((socket) => {
-        console.log('Conectado con éxito a la primera IP');
-        setSocket(socket);
-      })
-      .catch((error) => {
-        console.log('Error al conectar a la primera IP:', error);
-        console.log('Intentando con la segunda IP...');
-        return connectToSocket(ipBackend2);
-      })
-      .then((socket) => {
-        if (!socket) {
-          console.log('Error al conectar a la segunda IP.');
-          console.log('Intentando con la tercera IP...');
-          return connectToSocket(ipBackend3);
-        }
-        console.log('Conectado con éxito a la segunda IP');
-        setSocket(socket);
-      })
-      .catch((error) => {
-        console.log('Error al conectar a la tercera IP:', error);
-        console.log('No se pudo establecer conexión con ninguna IP.');
-      });
-  }, []);
+			socket.on('connect', () => {
+				// La conexión se estableció con éxito
+				resolve(socket);
+			});
 
-  return (
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/game/:packName" element={<GamePage socket={socket} />} />
-          <Route path="/clientserver" element={<ClientView socket={socket} />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+			socket.on('connect_error', (error) => {
+				// La conexión no se pudo establecer
+				reject(error);
+			});
+		});
+	}
+
+	// Uso en el componente App
+	useEffect(() => {
+		const apiKey = 'rnd_EooSJwkJB9Xu8Q0pVx11UVcOSIM1'; // Reemplaza con tu API key
+		connectToSocketWithAPIKey(ipBackend1, apiKey)
+			.then((socket) => {
+				console.log('Conectado con éxito a la primera IP');
+				setSocket(socket);
+			})
+			.catch((error) => {
+				console.log('Error al conectar a la primera IP:', error);
+				console.log('Intentando con la segunda IP...');
+				return connectToSocketWithAPIKey(ipBackend2, apiKey);
+			})
+			.then((socket) => {
+				if (!socket) {
+					console.log('Error al conectar a la segunda IP.');
+					console.log('Intentando con la tercera IP...');
+					return connectToSocketWithAPIKey(ipBackend3, apiKey);
+				}
+				console.log('Conectado con éxito a la segunda IP');
+				setSocket(socket);
+			})
+			.catch((error) => {
+				console.log('Error al conectar a la tercera IP:', error);
+				console.log('No se pudo establecer conexión con ninguna IP.');
+			});
+	}, []);
+
+
+	return (
+		<Router>
+			<div>
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/game/:packName" element={<GamePage socket={socket} />} />
+					<Route path="/clientserver" element={<ClientView socket={socket} />} />
+				</Routes>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
